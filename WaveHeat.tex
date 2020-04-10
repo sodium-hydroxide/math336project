@@ -1,0 +1,79 @@
+%% AMS-LaTeX Created with the Wolfram Language for Students - Personal Use Only : www.wolfram.com
+
+\documentclass{article}
+\usepackage{amsmath, amssymb, graphics, setspace}
+
+\newcommand{\mathsym}[1]{{}}
+\newcommand{\unicode}[1]{{}}
+
+\newcounter{mathematicapage}
+\begin{document}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{DiscAnim}[\text{f$\_$},\{t,\text{t0$\_$},\text{t1$\_$}\},\text{n$\_$}]\text{:=}}\\
+\pmb{\text{ListAnimate}[}\\
+\pmb{\text{Table}[\text{Plot3D}[f,\{x,-1,1\},\{y,-1,1\},}\\
+\pmb{\text{RegionFunction}\to \text{Function}[\{x,y,z\},x{}^{\wedge}2+y{}^{\wedge}2\leq 1],\text{PlotRange}\to \{-5,5\}],}\\
+\pmb{\{t,\text{t0},\text{t1},(\text{t1}-\text{t0})/n\}]]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{Psi}[\text{r$\_$},\text{p$\_$},\text{n$\_$},\text{m$\_$}]\text{:=}\text{BesselJ}[n,\text{BesselJZero}[n,m] r] \text{Exp}[I
+n p]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{HeatSol}[\text{r$\_$},\text{p$\_$},\text{t$\_$}]\text{:=}\frac{9}{4} \text{BesselJ}[0,\text{{``}8.65373{''}} r]\text{Exp}[-\text{{``}74.887{''}}
+t]-}\\
+\pmb{3 \text{BesselJ}[1,\text{{``}7.01559{''}} r] \text{Cos}[p]\text{Exp}[-\text{{``}49.2185{''}}t]+}\\
+\pmb{\frac{1}{5} \text{BesselJ}[2,\text{{``}14.796{''}} r] \text{Sin}[2 p]\text{Exp}[-\text{{``}218.92{''}}t]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{WaveSol1}[\text{r$\_$},\text{p$\_$},\text{t$\_$}]\text{:=}\frac{9}{4} \text{BesselJ}[0,\text{{``}8.65373{''}} r]\text{Cos}[8.653727912911013
+t]-}\\
+\pmb{3 \text{BesselJ}[1,\text{{``}7.01559{''}} r] \text{Cos}[p]\text{Cos}[7.0155866698156t]+}\\
+\pmb{\frac{1}{5} \text{BesselJ}[2,\text{{``}14.796{''}} r] \text{Sin}[2 p]\text{Cos}[\text{{``}14.796{''}}t]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{WaveSol2}[\text{r$\_$},\text{p$\_$},\text{t$\_$}]\text{:=}}\\
+\pmb{\frac{9}{4*8.653727912911013} \text{BesselJ}[0,\text{{``}8.65373{''}} r]\text{Sin}[8.653727912911013 t]-}\\
+\pmb{(3/7.0155866698156) \text{BesselJ}[1,\text{{``}7.01559{''}} r] \text{Cos}[p]\text{Sin}[7.0155866698156t]+}\\
+\pmb{\frac{1}{5*14.79595178235126} \text{BesselJ}[2,\text{{``}14.796{''}} r] \text{Sin}[2 p]\text{Sin}[\text{{``}14.796{''}}t]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{heat} = \text{DiscAnim}[\text{HeatSol}[\text{Sqrt}[x{}^{\wedge}2+y{}^{\wedge}2],\text{ArcTan}[x,y],t/10],\{t,0,0.5\},240]}\\
+\pmb{\text{wave1} = \text{DiscAnim}[\text{WaveSol1}[\text{Sqrt}[x{}^{\wedge}2+y{}^{\wedge}2],\text{ArcTan}[x,y],t/10],\{t,0,100\},240]}\\
+\pmb{\text{wave2} = \text{DiscAnim}[\text{WaveSol2}[\text{Sqrt}[x{}^{\wedge}2+y{}^{\wedge}2],\text{ArcTan}[x,y],t/10],\{t,0,100\},240]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\fbox{$
+\begin{array}{l}
+  \\
+  \\
+\end{array}
+$}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\fbox{$
+\begin{array}{l}
+  \\
+  \\
+\end{array}
+$}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\fbox{$
+\begin{array}{l}
+  \\
+  \\
+\end{array}
+$}\)
+\end{doublespace}
+
+\end{document}

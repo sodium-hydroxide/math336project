@@ -1,0 +1,51 @@
+\ProvidesPackage{noah}
+
+
+\RequirePackage{amsmath,amssymb,amsthm,calligra,bm,graphicx,hyperref,braket,subfiles}
+%\RequirePackage[toc,page]{appendix}
+%% Font and Page Setup
+\RequirePackage[margin=1.5 in]{geometry}
+%\renewcommand{\familydefault}{\ttdefault}
+%\Requireackage[euler-digits,euler-hat-accent]{eulervm}
+%% Shortcuts
+% Special Fonts
+\newcommand{\bb}[1]{\mathbb{#1}}
+\newcommand{\mc}[1]{\mathcal{#1}}
+% Differential Operators
+\newcommand{\der}[1]{\partial_{#1}}
+\newcommand{\pder}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\dder}[2]{\frac{d #1}{d #2}}
+\newcommand{\grad}{\mathrm{grad}}
+\newcommand{\sgrad}{\mathrm{sgrad}}
+\newcommand{\curl}{\mathrm{curl}}
+\newcommand{\dive}{\mathrm{div}}
+\newcommand{\lapl}{\bigtriangleup}
+\newcommand{\dal}{\Box}
+\newcommand{\lder}{\mc{L}}
+\newcommand{\cder}{\nabla}
+% Matrices and Vectors
+\newcommand{\matx}[1]{\left[\begin{matrix} #1 \end{matrix}\right]}
+\newcommand{\detm}[1]{\left|\begin{matrix} #1 \end{matrix}\right|}
+\newcommand{\syst}[1]{\left\{\begin{matrix}#1 \end{matrix}\right.}
+\newcommand{\vect}[1]{\bm{#1}}
+\newcommand{\matr}[1]{\mathbf{#1}}
+\newcommand{\opp}[1]{\hat{#1}}
+\newcommand{\hatt}[1]{\bm{\hat{#1}}}
+\newcommand{\tanv}{\hatt{T}}
+\newcommand{\norv}{\hatt{N}}
+\newcommand{\bv}[1]{\vect{e}_{#1}}
+% Functions That Are Used
+\newcommand{\modu}[1]{\left| #1 \right|}
+\newcommand{\norm}[1]{\left|\left| #1 \right|\right|}
+\newcommand{\matel}[3]{\left<#1\right|#2\left|#3\right>}
+\newcommand{\proj}[2]{\text{proj}_{#1} {#2}}
+\newcommand{\inp}[2]{\left<#1\left| #2\right>\right.}
+\newcommand{\comm}[2]{\left[#1,#2\right]}
+\newcommand{\pois}[2]{\left\{#1,#2\right\}}
+\newcommand{\acomm}[2]{\left\{#1,#2\right\}}
+\newcommand{\avg}[1]{\left< #1 \right>}
+\newcommand{\Arg}{\text{Arg}}
+\newcommand{\atan}{\text{atan2}}
+\newcommand{\eset}{\varnothing}
+% Physics Symbols
+\newcommand{\dbar}{d\hspace*{-0.08em}\bar{}\hspace*{0.1em}}

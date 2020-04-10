@@ -1,0 +1,9 @@
+\contentsline {section}{\numberline {1}Introduction}{1}{section.1}% 
+\contentsline {section}{\numberline {2}The Angular Equation}{2}{section.2}% 
+\contentsline {section}{\numberline {3}The Radial Equation}{3}{section.3}% 
+\contentsline {section}{\numberline {4}Physics Behind the Wave Equation}{4}{section.4}% 
+\contentsline {section}{\numberline {5}Physics Behind the Heat Equation}{5}{section.5}% 
+\contentsline {section}{\numberline {6}Initial Conditions}{5}{section.6}% 
+\contentsline {section}{\numberline {7}Dynamics for a Particular Initial Condition}{6}{section.7}% 
+\contentsline {section}{\numberline {8}Mathematica Code for Animations}{9}{section.8}% 
+\contentsline {section}{\numberline {9}References}{10}{section.9}% 
