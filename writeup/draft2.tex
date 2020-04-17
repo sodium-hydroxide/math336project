@@ -131,11 +131,72 @@ Given our boundary data, the eigenfunctions will be ones that satisfy the follow
 \end{equation}
 In order to solve this equation, we again separate the variables, now assuming that $\psi(r,\phi)=f(r)g(\phi)$. If we insert this into the Helmholtz equation and divide by $\psi$ we obtain:
 \begin{equation}
-  \frac{1}{f(r)}\left[r^2 \dder{^2 f}{r^2} + r \dder{f}{r}+k^2 r^2\right] = -\frac{1}{g(\phi)}\dder{^2 g}{\phi^2}
+  \frac{1}{f(r)}\left[r^2 \dder{^2 f}{r^2} + r \dder{f}{r}+k^2 r^2\right] = -\frac{1}{g(\phi)}\dder{^2 g}{\phi^2} = n^2
 \end{equation}
-Again the left-hand side is a function of $r$ only, and the right hand side is a function of $\phi$ only. The condition on the radial equation is that $f(1) = 0$. The condition on the angular equation is less obvious though. In order to get physical results, as well as to make sense of partial derivatives, we require our functions to be twice differentiable. This implies that our angular equation must at the very least be continuous, and therefore we have the implicit condition that $g(0)=g(2\pi)$.
-\section{Inner Products and Orthonormal Basis}
+Again the left-hand side is a function of $r$ only, and the right hand side is a function of $\phi$ only. For reasons that will be obvious in later sections, we have called the separation constant $n^2$. The condition on the radial equation is that $f(1) = 0$. The condition on the angular equation is less obvious though. In order to get physical results, as well as to make sense of partial derivatives, we require our functions to be twice differentiable. This implies that our angular equation must at the very least be continuous, and therefore we have the implicit condition that $g(0)=g(2\pi)$.
+\section{Inner Products and Orthogonal Basis}
+In order to better describe the solutions to the above equations, we will review some concepts from linear algebra. Recall that the inner product is a bilinear form that maps two elements from the vector space to the real or complex numbers. Though it has other properties that the map must satisfy, it is sufficient for our purposes to note that it is a generalization of the scalar product in $\bb{R}^3$ and can be used to define orthogonality. Two vectors are orthogonal if their inner product is zero:
+\begin{equation}
+  (u,v)=0
+\end{equation}
+The other important concept is that of a change of basis. A basis is any set of vectors $\{\bv{i}\}$ such that any vector in the vector space may be written as a unique linear combination of the basis vectors:
+\begin{equation}
+  v = \sum_{i} v_i \bv{i}
+\end{equation}
+An orthogonal basis is one where each of the basis vectors satisfies:
+\begin{equation}
+  (\bv{i},\bv{j})= A_i \delta_{ij}
+\end{equation}
+where $A_i$ is the length of a given basis vector, and $\delta_{ij}$ is the Kronecker delta defined as:
+\begin{equation}
+  \delta_{ij} = \syst{
+    1; i = j \\
+    0; i \neq j
+  }
+\end{equation}
+The inner product can then be used to find the components of a vector in a given basis:
+\begin{equation}
+  (\bv{i},v)=\sum_{j} v_j (\bv{i},\bv{j})\rightarrow v_i = \frac{(\bv{i},v)}{\left|\left| \bv{i}\right|\right|^2}
+\end{equation}
+These results are not limited to finite dimensional vector spaces, and will be used frequently for the results in later sections. We will regularly be working with the vector space $L^2(\Omega)$, which is the set of functions that are square integrable on some domain $\Omega$. The most common inner product for these function-spaces is defined in the following way:
+\begin{equation}
+  \boxed{
+    (f,g) = \int_\Omega f^\star(x) g(x)dx
+  }
+\end{equation}
+where $\star$ is denotes a complex conjugation. 
 \section{Fourier Series}
+The angular equation for the Helmholtz equation is:
+\begin{equation}
+  g''+n^2 g=0
+\end{equation}
+This has the solution:
+\begin{equation}
+  g(\phi) = \exp(i n \phi)
+\end{equation}
+we can account for the two linearly independent solutions by allowing $n$ to run from positive to negative values. In order for $g$ to be a continuous function, we see that $e^{2\pi i n} = 1$ which requires that $n\in\bb{Z}$.\\
+In order for us to match the initial conditions of the heat or wave equation, we will need to sum different solutions to the Helmholtz equation in order to construct the proper solution. For the time being, let us consider representing a function in the following way:
+\begin{equation}
+  F(\phi) = \sum_{n = -\infty}^\infty c_n e^{in\phi}
+\end{equation}
+This is known as a Fourier series, and is the method of rewriting a function on the unit circle $S^1$ as sum of complex exponentials. In the language of linear algebra, these complex exponentials are a basis for $L^2(S^1)$ and the coefficients $c_n$ are the components of the function. The inner product for this space is:
+\begin{equation}
+  (f(\phi),g(\phi)) = \int_0^{2\pi} f^\star(\phi)g(\phi) d\phi
+\end{equation}
+If we integrate two of our basis functions, we see that:
+\begin{equation}
+  \int_0^{2\pi} e^{-i n' \phi} e^{i n \phi} d\phi = \frac{1}{i(n-n')}\left(e^{2\pi i (n-n')} - 1\right)
+\end{equation}
+If $n\neq n'$ then $n-n'$ is some non-zero integer, and the integral is zero. This means that our functions are orthogonal. If they are the same function, then we have:
+\begin{equation}
+  \left(e^{in\phi}, e^{i n\phi} \right) = \norm{e^{in\phi}}^2 = 2\pi
+\end{equation}
+This gives the orthogonality relationship for our complex exponentials:
+\begin{equation}
+  \boxed{
+  \left(e^{in\phi}, e^{i m\phi} \right) = 2\pi \delta_{nm}
+  }
+\end{equation}
 \section{Fourier-Bessel Series}
 \section{The Normal Modes on a Disc}
 \section{Matching Initial Conditions}
