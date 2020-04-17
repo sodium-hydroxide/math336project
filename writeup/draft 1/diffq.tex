@@ -36,7 +36,9 @@
 \tableofcontents
 \section{Introduction}
 Two of the most common partial differential equations that occur in mathematics and physics are the wave equation,
-\begin{equation}\lapl u=\pder{^2 u}{t^2}\end{equation}
+\begin{equation}
+\lapl u=\pder{^2 u}{t^2}
+\end{equation}
 and the heat equation,
 \begin{equation}\lapl u=\pder{u}{t}\end{equation}
 Both of these equations allow us to analyze the different types of dynamics that occur in PDEs, and also allow us to introduce a method for solving these equations that is applicable for most equations are able to be written into Sturm-Liouville form. We will solve both of these equations on the unit disc $B^2$, with the boundary condition that the function must vanish at the boundary. In the context of the heat equation, this means that we keep the boundary at a fixed temperature. For the wave equation, this means the disc will act like a drumhead, with the ends clamped down. Similar to ODEs, we must also supply initial conditions. Since the heat equation is first order in time, we only need to specify $u(\vect{x},0)$. Since the wave equation is second-order in time, we must specify $u(\vect{x},0)$ and $\der{t}u(\vect{x},0)$.\\

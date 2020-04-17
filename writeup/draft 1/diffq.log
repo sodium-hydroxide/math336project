@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  9 APR 2020 11:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  12 APR 2020 14:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -31,13 +31,9 @@ Package: changepage 2009/10/20 v1.0c check page and change page layout
 \c@cp@cntr=\count90
 \cp@tempcnt=\count91
 )
-(../noah.sty
-
-LaTeX Warning: You have requested package `../noah',
-               but the package provides `noah'.
-
+(./noah.sty
 Package: noah 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsmath.sty
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2018/12/01 v2.17b AMS math features
 \@mathmargin=\skip45
 
@@ -743,9 +739,9 @@ Package rerunfilecheck Info: File `diffq.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 263.
  ) 
 Here is how much of TeX's memory you used:
- 9365 strings out of 492616
- 138016 string characters out of 6129482
- 433558 words of memory out of 5000000
+ 9364 strings out of 492616
+ 138000 string characters out of 6129482
+ 433555 words of memory out of 5000000
  13085 multiletter control sequences out of 15000+600000
  14788 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
