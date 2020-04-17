@@ -164,6 +164,7 @@ INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT /Users/njb/Dropbox/Code/Git/math336project/math336project/writeup/draft2.aux
 INPUT /Users/njb/Dropbox/Code/Git/math336project/math336project/writeup/draft2.out
 INPUT /Users/njb/Dropbox/Code/Git/math336project/math336project/writeup/draft2.out
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb

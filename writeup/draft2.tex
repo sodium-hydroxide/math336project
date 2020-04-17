@@ -129,80 +129,17 @@ Given our boundary data, the eigenfunctions will be ones that satisfy the follow
     \end{matrix}
   }
 \end{equation}
+In order to solve this equation, we again separate the variables, now assuming that $\psi(r,\phi)=f(r)g(\phi)$. If we insert this into the Helmholtz equation and divide by $\psi$ we obtain:
+\begin{equation}
+  \frac{1}{f(r)}\left[r^2 \dder{^2 f}{r^2} + r \dder{f}{r}+k^2 r^2\right] = -\frac{1}{g(\phi)}\dder{^2 g}{\phi^2}
+\end{equation}
+Again the left-hand side is a function of $r$ only, and the right hand side is a function of $\phi$ only. The condition on the radial equation is that $f(1) = 0$. The condition on the angular equation is less obvious though. In order to get physical results, as well as to make sense of partial derivatives, we require our functions to be twice differentiable. This implies that our angular equation must at the very least be continuous, and therefore we have the implicit condition that $g(0)=g(2\pi)$.
 \section{Inner Products and Orthonormal Basis}
 \section{Fourier Series}
 \section{Fourier-Bessel Series}
 \section{The Normal Modes on a Disc}
 \section{Matching Initial Conditions}
 \section{A Particular Solution}
-% \section{Dynamics for a Particular Initial Condition}
-% In principal, the above equations will solve the system for the appropriate initial conditions. As an example of this, consider the following function on the unit disc:
-% \begin{equation}f(r,\phi)=\frac{9}{4}J_0(\alpha_{03}r)-3 J_1(\alpha_{12}r)\cos(\phi)+\frac{1}{5} J_2(\alpha_{24}r)\sin(2\phi)
-% \end{equation}
-% Using Mathematica, we find that the relevant eigenvalues for this problem are, $\alpha_{03}\approx8.6537$, $\alpha_{12}\approx 7.01558$, and $\alpha_{24}\approx 14.7959$. A plot of this function is shown below.\\
-% \begin{center}
-% \begin{figure}
-% \includegraphics[width = 4.5 cm]{images/initialvalue.png}
-% \caption{Initial distribution}\end{figure}
-% \end{center}
-% \\
-
-% If we use this as the initial value of the heat equation, we have the following solution:
-% \begin{equation}
-%     u(r,\phi,t)=\frac{9}{4}J_0(\alpha_{03}r)e^{-\alpha_{03}^2 t}-3 J_1(\alpha_{12}r)\cos(\phi)e^{-\alpha_{12}^2 t}+\frac{1}{5} J_2(\alpha_{24}r)\sin(2\phi)e^{-\alpha_{12}^2 t}
-
-% \end{equation}
-% As we can see the components normal modes with larger eigenvalues will decay more quickly which is why the heat equation is so effective at "smoothing" surface. Below are some plots of the solution at later times.
-
-% \begin{figure}[!htb]
-%     \minipage{0.32\textwidth}
-%       \includegraphics[width=\linewidth]{images/heat1.png}
-%     \endminipage\hfill
-%     \minipage{0.32\textwidth}
-%       \includegraphics[width=\linewidth]{images/heat2.png}
-%     \endminipage\hfill
-%     \minipage{0.32\textwidth}%
-%       \includegraphics[width=\linewidth]{images/heat3.png}
-%     \endminipage
-%     \caption{Solution to the heat equation for various points in time.}
-%     \end{figure}
-% If we use this as the initial dislpacement for the wave equation with no initial velocity, we see that the waves interact in interesting ways to produce the following effects.
-% \begin{equation}
-%     u(r,\phi,t)=\frac{9}{4}J_0(\alpha_{03}r)\cos(\alpha_{03} t)-3 J_1(\alpha_{12}r)\cos(\phi)\cos(\alpha_{12} t)+\frac{1}{5} J_2(\alpha_{24}r)\sin(2\phi)\cos(\alpha_{12} t)
-
-% \end{equation}
-% We can also use this as the initial distribution for the velocity of the wave. In this case, the displacements are very minor, and we can see that there are only slight deviations from the at rest behaviour.
-% \begin{figure}[!htb]
-%     \minipage{0.32\textwidth}
-%       \includegraphics[width=\linewidth]{images/wave1.png}
-%     \endminipage\hfill
-%     \minipage{0.32\textwidth}
-%       \includegraphics[width=\linewidth]{images/wave2.png}
-%     \endminipage\hfill
-%     \minipage{0.32\textwidth}%
-%       \includegraphics[width=\linewidth]{images/wave3.png}
-%     \endminipage
-%     \caption{Solutions to the wave equation for a given initial dispacement.}
-%     \end{figure}
-
-
-% \begin{equation}
-%     u(r,\phi,t)=\frac{9}{4 \alpha_{03}}J_0(\alpha_{03}r)\sin(\alpha_{03} t)-\frac{1}{\alpha_{12}} J_1(\alpha_{12}r)\cos(\phi)\sin(\alpha_{12} t)+\frac{1}{5\alpha_{24}} J_2(\alpha_{24}r)\sin(2\phi)\sin(\alpha_{12} t)
-
-% \end{equation}
-
-% \begin{figure}[!htb]
-%     \minipage{0.32\textwidth}
-%       \includegraphics[width=\linewidth]{images/waves1.png}
-%     \endminipage\hfill
-%     \minipage{0.32\textwidth}
-%       \includegraphics[width=\linewidth]{images/waves2.png}
-%     \endminipage\hfill
-%     \minipage{0.32\textwidth}%
-%       \includegraphics[width=\linewidth]{images/waves3.png}
-%     \endminipage
-%     \caption{Solutions to the wave equation for a given initial velocity.}
-%     \end{figure}
 
 \newpage
 \section{References}
