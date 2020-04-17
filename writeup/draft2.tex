@@ -38,7 +38,7 @@
 
 \end{abstract}
 \section{Introduction}
-Partial differential equations (PDEs) are a natural extension to  ordinary differential equations, in that they describe systems that can vary with respect to multiple variables, traditionally position and time. Two fundamental PDEs are the heat and wave equations. Both of these involve the Laplace operator defined in the following way:
+Partial differential equations (PDEs) are a natural extension to  ordinary differential equations, in that they describe systems that can vary with respect to multiple variables, traditionally position and time. Two fundamental PDEs are the heat and wave equations. Both of these involve the Laplace operator, defined in the following way:
 \begin{equation}
   \lapl f := \dive(\grad f)
 \end{equation}
@@ -90,7 +90,7 @@ To begin solving these equations, we will employ a method known as separation of
 The left-hand side is just a function of the spacial variables, while the right-hand side is just a function of time. This means that the two sides are independent of each other, and therefore must be equal to a constant. For reasons that will be clear later on, I will use $-k^2$ as the constant. This leaves us with two differential equations:
 \begin{equation}
   \begin{matrix}
-    \lapl\psi+k^2\psi=0
+    \lapl\psi+k^2\psi=0\\
     \dot{\chi}=-k^2 \chi
   \end{matrix}
 \end{equation}
@@ -101,11 +101,34 @@ We can easily solve the time equation to obtain:
 Any constants of integration may be absorbed into $\psi(r,\phi)$. If we follow this same procedure for the wave equation, we are left with the two separated differential equations:
 \begin{equation}
   \begin{matrix}
-    \lapl\psi+k^2\psi=0
+    \lapl\psi+k^2\psi=0\\
     \ddot{\chi}=-k^2 \chi
   \end{matrix}
 \end{equation}
+Again the time component can be easily solved, to give the following solution:
+\begin{equation}
+  \chi_{\mathrm{wave}}=A\cos(kt)+B\sin(kt)
+\end{equation}
+It is important to notice that for both of these equations, the spacial part is the same. Given that we are using the same boundary conditions for both equations, solving this equation will provide us with solutions to both the wave and heat equation.
 \section{The Helmholtz Equation}
+The above differential equation:
+\begin{equation}
+  \lapl \psi+k^2\psi=0
+\end{equation}
+is known as the Helmholtz equation, and it describes the eigenvalues and eigenfunctions of the Laplacian on the unit disc. Recall that an eigenvalue equation is one where:
+\begin{equation}
+  \mc{L}v = \lambda v
+\end{equation}
+where $\mc{L}$ is a linear operator, $v$ is an eigenvector, and $\lambda$ is an eigenvalue. In the context of differential operators, the eigenvectors are referred to as eigenfunctions.\\
+Given our boundary data, the eigenfunctions will be ones that satisfy the following equations:
+\begin{equation}
+  \boxed{
+    \begin{matrix}
+      \lapl \psi+k^2\psi=0 \\ 
+      \psi(1,\phi) = 0
+    \end{matrix}
+  }
+\end{equation}
 \section{Inner Products and Orthonormal Basis}
 \section{Fourier Series}
 \section{Fourier-Bessel Series}
