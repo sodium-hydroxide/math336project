@@ -289,8 +289,131 @@ If we take the inner product between one of our basis functions, and solve for $
   }
 \end{equation}
 \section{Matching Initial Conditions}
-\section{A Particular Solution}
+If we go back to our separated equation for the heat equation, we have the following general solution:
+\begin{equation}
+  u(r,\phi,t) = \sum_{nm} c_{nm} \psi_{nm}(r,\phi) \exp(-\alpha_{nm}^2 t)
+\end{equation}
+Before we continue, it is important to note that the normal modes that oscillate more spatially, (those with a larger eigenvalue) will damp more quickly than others. This shows the smoothing property of solutions to the heat equation. Given that our boundary data states that the function must vanish at the boundary, we see that the steady state solution is one with uniform temperature. If the boundary was non-uniform, then we would find that the solution would evolve to a soution of Laplace's equation whose boundary values matched the boundary temperature.\\
+The above solution is the general solution to the heat equation for any constants $c_{nm}$, but in order to find the particular solution, we evaluate the function at time $t=0$.
+\begin{equation}
+  u(r,\phi,0) = \sum_{nm} c_{nm} \psi_{nm}(r,\phi) 
+\end{equation}
+We see that this is simply the initial heat distribution written as an eigenfunction expansion. Using this, we see that the coefficients are:
+\begin{equation}
+  c_{nm} = \frac{1}{\pi J_{n+1}(\alpha_{nm})^2}\int_0^{2\pi} d\phi\int_0^1 dr u(r,\phi,0) r e^{- i n \phi}J_n(\alpha_{nm} r)
+\end{equation}
+Using these expansion coefficients, and the eigenfunction expansion in general, we can construct a function known as the Green's function, or fundamental solution for this problem. This corresponds to a distribution that is initially a Dirac-Delta function:
+\begin{equation}
+  \boxed{
+    \boxed{
+      G(r,r',\phi,\phi',t) = \sum_{m = 1}^\infty \sum_{n = -\infty} ^\infty 
+      \frac{J_n(\alpha_{nm} r) J_n(\alpha_{nm} r') \exp\left(i n(\phi - \phi')\right) }{\pi \left(J_{n+1}(\alpha_{nm})\right)^2}\exp\left(-\alpha_{nm}^2 t\right)
+    }
+  }
+\end{equation}
+Any solution to the heat equation can be written in the following way:
+\begin{equation}
+  u(r,\phi,t) = \int_0^{2\pi} d\phi' \int_0^1 dr' \left[r' G(r,r',\phi,\phi',t) u(r',\phi',0) \right]
+\end{equation}
+In a similar vain, we may write the solution to the wave equation in the following way:
+\begin{equation}
+u(r,\phi,t) = \sum_{nm} = \psi_{nm}(A_{nm}\cos(\alpha_{nm} t)+B_{nm}\sin(\alpha_{nm}t))
+\end{equation}
+The data we are given is the initial displacement $u(r,\phi,0)$ and the initial velocity $\der{t} u(r,\phi,0)$. If we evaluate this solution at time $t=0$, we find that the $A_{nm}$ terms are determined by the initial displacement. By a similar method as the heat equation, we see that:
+\begin{equation}
+  A_{nm} = \frac{1}{\pi J_{n+1}(\alpha_{nm})^2}\int_0^{2\pi} d\phi\int_0^1 dr u(r,\phi,0) r e^{- i n \phi}J_n(\alpha_{nm} r)
+\end{equation}
+If we evaluate the first derivative with respect to time at $t=0$, we see that the $B_{nm}$ terms are determined by our initial velocity:
+\begin{equation}
+  B_{nm} = \frac{1}{\pi\alpha_{nm} J_{n+1}(\alpha_{nm})^2}\int_0^{2\pi} d\phi\int_0^1 dr u(r,\phi,0) r e^{- i n \phi}J_n(\alpha_{nm} r)
+\end{equation}
+Like the heat equation, we now combine these constants with the expansion to obtain the two Green's functions for the wave equation. There is one for the initial displacement, and another for the initial velocity.
+\begin{equation}
+  \boxed{
+    \boxed{
+      G_1(r,r',\phi,\phi',t) = \sum_{m = 1}^\infty \sum_{n = -\infty} ^\infty 
+      \frac{J_n(\alpha_{nm} r) J_n(\alpha_{nm} r') \exp\left(i n(\phi - \phi')\right) }{\pi \left(J_{n+1}(\alpha_{nm})\right)^2}\cos\left(\alpha_{nm}^2 t\right)
+    }
+  }
+\end{equation}
+\begin{equation}
+  \boxed{
+    \boxed{
+      G_2(r,r',\phi,\phi',t) = \sum_{m = 1}^\infty \sum_{n = -\infty} ^\infty 
+      \frac{J_n(\alpha_{nm} r) J_n(\alpha_{nm} r') \exp\left(i n(\phi - \phi')\right) }{\pi \alpha_{nm}\left(J_{n+1}(\alpha_{nm})\right)^2}\sin\left(\alpha_{nm}^2 t\right)
+    }
+  }
+\end{equation}
+With these, the general solution to the wave equation may be written as:
+\begin{equation}
+  u(r,\phi,t) = \int_0^{2\pi} d\phi' \int_0^1 dr' r' \left[G_1(r,r',\phi,\phi',t) u(r',\phi',0)+ G_2(r,r',\phi,\phi',t) \left.\pder{u(r,\phi,t)}{t}\right|_{t=0}\right]
+\end{equation}
+\section{Dynamics for a Particular Initial Condition}
+In principal, the above equations will solve the system for the appropriate initial conditions. As an example of this, consider the following function on the unit disc:
+\begin{equation}
+  f(r,\phi)=\frac{9}{4}J_0(\alpha_{03}r)-3 J_1(\alpha_{12}r)\cos(\phi)+\frac{1}{5} J_2(\alpha_{24}r)\sin(2\phi)
+\end{equation}
+Using Mathematica, we find that the relevant eigenvalues for this problem are, $\alpha_{03}\approx8.6537$, $\alpha_{12}\approx 7.01558$, and $\alpha_{24}\approx 14.7959$. A plot of this function is shown below.\\
+% \begin{center}
+%   \begin{figure}
+%     \includegraphics[width = 4.5 cm]{images/initialvalue.png}
+%     \caption{Initial distribution}
+%   \end{figure}
+% \end{center}
+If we use this as the initial value of the heat equation, we have the following solution:
+\begin{equation}
+  u(r,\phi,t)=\frac{9}{4}J_0(\alpha_{03}r)e^{-\alpha_{03}^2 t}-3 J_1(\alpha_{12}r)\cos(\phi)e^{-\alpha_{12}^2 t}+\frac{1}{5} J_2(\alpha_{24}r)\sin(2\phi)e^{-\alpha_{12}^2 t}
+\end{equation}
+As we can see the components normal modes with larger eigenvalues will decay more quickly which is why the heat equation is so effective at "smoothing" surface. Below are some plots of the solution at later times.
+% \begin{figure}[!htb]
+%   \minipage{0.32\textwidth}
+%     \includegraphics[width=\linewidth]{images/heat1.png}
+%   \endminipage\hfill
+%   \minipage{0.32\textwidth}
+%     \includegraphics[width=\linewidth]{images/heat2.png}
+%   \endminipage\hfill
+%   \minipage{0.32\textwidth}%
+%     \includegraphics[width=\linewidth]{images/heat3.png}
+%   \endminipage
+%   \caption{Solution to the heat equation for various points in time.}
+% \end{figure}
+If we use this as the initial displacement for the wave equation with no initial velocity, we see that the waves interact in interesting ways to produce the following effects.
+\begin{equation}
+    u(r,\phi,t)=\frac{9}{4}J_0(\alpha_{03}r)\cos(\alpha_{03} t)-3 J_1(\alpha_{12}r)\cos(\phi)\cos(\alpha_{12} t)+\frac{1}{5} J_2(\alpha_{24}r)\sin(2\phi)\cos(\alpha_{12} t)
+\end{equation}
+We can also use this as the initial distribution for the velocity of the wave. In this case, the displacements are very minor, and we can see that there are only slight deviations from the at rest behavior.
 
+
+% \begin{figure}[!htb]
+%   \minipage{0.32\textwidth}
+%     \includegraphics[width=\linewidth]{images/wave1.png}
+%   \endminipage\hfill
+%   \minipage{0.32\textwidth}
+%     \includegraphics[width=\linewidth]{images/wave2.png}
+%   \endminipage\hfill
+%   \minipage{0.32\textwidth}%
+%     \includegraphics[width=\linewidth]{images/wave3.png}
+%   \endminipage
+%   \caption{Solutions to the wave equation for a given initial displacement.}
+% \end{figure}
+
+
+\begin{equation}
+    u(r,\phi,t)=\frac{9}{4 \alpha_{03}}J_0(\alpha_{03}r)\sin(\alpha_{03} t)-\frac{1}{\alpha_{12}} J_1(\alpha_{12}r)\cos(\phi)\sin(\alpha_{12} t)+\frac{1}{5\alpha_{24}} J_2(\alpha_{24}r)\sin(2\phi)\sin(\alpha_{12} t)
+\end{equation}
+
+% \begin{figure}[!htb]
+%     \minipage{0.32\textwidth}
+%       \includegraphics[width=\linewidth]{images/waves1.png}
+%     \endminipage\hfill
+%     \minipage{0.32\textwidth}
+%       \includegraphics[width=\linewidth]{images/waves2.png}
+%     \endminipage\hfill
+%     \minipage{0.32\textwidth}%
+%       \includegraphics[width=\linewidth]{images/waves3.png}
+%     \endminipage
+%     \caption{Solutions to the wave equation for a given initial velocity.}
+%     \end{figure}
 \newpage
 \section{References}
 Asmar, N. H. (2002). \textit{Applied complex analysis with partial differential equations}. New Jersey: Prentice-Hall Inc.\\
