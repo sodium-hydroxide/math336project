@@ -1,4 +1,4 @@
-\documentclass{paper}
+\documentclass{article}
 \usepackage{changepage}
 \usepackage{noah}
 
@@ -33,10 +33,11 @@
 \title{Vibrations and Heat Diffusion on the Unit Disc}
 \begin{document}
 \maketitle
-\tableofcontents
 \begin{abstract}
-
+  The method of eigenfunction expansion is developed and demonstrated for solutions to the Helmholtz equation on the unit disc. Through this method, Greens' functions for the wave and heat equation are generated and particular solutions are analyzed, to show the variety of dynamics possible within the realm of partial differential equations.
 \end{abstract}
+\tableofcontents
+\newpage
 \section{Introduction}
 Partial differential equations (PDEs) are a natural extension to  ordinary differential equations, in that they describe systems that can vary with respect to multiple variables, traditionally position and time. Two fundamental PDEs are the heat and wave equations. Both of these involve the Laplace operator, defined in the following way:
 \begin{equation}
@@ -223,7 +224,7 @@ where $J_n$ is the $n$-th Bessel function of the first kind, or simply the $n$-t
     J_n(k) = 0
   }
 \end{equation}
-It is known that the integer order Bessel functions have an infinite number of zeros, so we will let $k = \alpha_{nm}$ denote the $m$-th zero of the $n$-th order Bessel function.\\
+It is known that the integer order Bessel functions have an infinite number of zeros, so we will let $k = \alpha_{nm}$ denote the $m$-th zero of the $n$-th order Bessel function. There is no closed form solution for these zeros, but they can be calculated numerically. In Mathematica, the code is $\alpha_{nm} = \texttt{BesselJZero[n,m]}$.\\
 Similar to the complex exponentials, we may expand functions which are elements of $L^2([0,1],rdr)$ in an infinite series of Bessel functions, in a method known as a Fourier-Bessel series.
 \begin{equation}
   F(r) = \sum_{m = 1}^{\infty} \sum_{n = -\infty}^\infty c_{nm} J_n(\alpha_{nm} r)
@@ -265,9 +266,28 @@ The inner product for this space is defined as a combination for the inner produ
 \end{equation}
 Our normal modes will therefore satisfy the following orthogonality relationship:
 \begin{equation}
-  (\psi_{n'm'},\psi_{nm}) = \delta_{n'n}\delta_{m'm} \pi J_{n+1}( \alpha_{nm } )
+  (\psi_{n'm'},\psi_{nm}) = \delta_{n'n}\delta_{m'm} \pi J_{n+1}( \alpha_{nm } )^2
 \end{equation}
-
+Our goal now is to use a method similar to the method for Fourier series and Fourier-Bessel series to expand any function into an infinite series of these normal modes. This is known as an eigenfunction-expansion, and is valid for expanding solutions to the equation:
+\begin{equation}
+  \mc{L} y_n = \lambda_n y_n
+\end{equation}
+where $\mc{L}$ is an operator that satisfies the following for the given inner product:
+\begin{equation}
+  (\mc{L} f,g) = (f,\mc{L} g)
+\end{equation}
+In the case of our normal modes, we hope to write any function $F:B^2\rightarrow\bb{C}$ as:
+\begin{equation}
+  \boxed{
+    F = \sum_{m = 1}^\infty\sum_{n = -\infty}^\infty c_{nm} \psi_{nm} = \sum_{nm} c_{nm}\psi_{nm}
+  }
+\end{equation}
+If we take the inner product between one of our basis functions, and solve for $c_{nm}$ we obtain the following equation:
+\begin{equation}
+  \boxed{
+    c_{nm} = \frac{1}{\pi J_{n+1}(\alpha_{nm})^2}\int_0^{2\pi} d\phi\int_0^1 dr F(r,\phi) r e^{- i n \phi}J_n(\alpha_{nm} r)
+  }
+\end{equation}
 \section{Matching Initial Conditions}
 \section{A Particular Solution}
 
