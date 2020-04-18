@@ -1,5 +1,6 @@
 \documentclass{article}
 \usepackage{changepage}
+\usepackage{float}
 \usepackage{noah}
 
 
@@ -273,7 +274,7 @@ Our goal now is to use a method similar to the method for Fourier series and Fou
   \mc{L} y_n = \lambda_n y_n
 \end{equation}
 where $\mc{L}$ is an operator that satisfies the following for the given inner product:
-\begin{equation}
+\begin{equation}\label{selfadjoint}
   (\mc{L} f,g) = (f,\mc{L} g)
 \end{equation}
 In the case of our normal modes, we hope to write any function $F:B^2\rightarrow\bb{C}$ as:
@@ -354,66 +355,44 @@ In principal, the above equations will solve the system for the appropriate init
   f(r,\phi)=\frac{9}{4}J_0(\alpha_{03}r)-3 J_1(\alpha_{12}r)\cos(\phi)+\frac{1}{5} J_2(\alpha_{24}r)\sin(2\phi)
 \end{equation}
 Using Mathematica, we find that the relevant eigenvalues for this problem are, $\alpha_{03}\approx8.6537$, $\alpha_{12}\approx 7.01558$, and $\alpha_{24}\approx 14.7959$. A plot of this function is shown below.\\
-% \begin{center}
-%   \begin{figure}
-%     \includegraphics[width = 4.5 cm]{images/initialvalue.png}
-%     \caption{Initial distribution}
-%   \end{figure}
-% \end{center}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width = 4.5 cm]{images/initialvalue.png}
+  \caption{Initial distribution to be analyzed.}
+\end{figure}
 If we use this as the initial value of the heat equation, we have the following solution:
 \begin{equation}
   u(r,\phi,t)=\frac{9}{4}J_0(\alpha_{03}r)e^{-\alpha_{03}^2 t}-3 J_1(\alpha_{12}r)\cos(\phi)e^{-\alpha_{12}^2 t}+\frac{1}{5} J_2(\alpha_{24}r)\sin(2\phi)e^{-\alpha_{12}^2 t}
 \end{equation}
 As we can see the components normal modes with larger eigenvalues will decay more quickly which is why the heat equation is so effective at "smoothing" surface. Below are some plots of the solution at later times.
-% \begin{figure}[!htb]
-%   \minipage{0.32\textwidth}
-%     \includegraphics[width=\linewidth]{images/heat1.png}
-%   \endminipage\hfill
-%   \minipage{0.32\textwidth}
-%     \includegraphics[width=\linewidth]{images/heat2.png}
-%   \endminipage\hfill
-%   \minipage{0.32\textwidth}%
-%     \includegraphics[width=\linewidth]{images/heat3.png}
-%   \endminipage
-%   \caption{Solution to the heat equation for various points in time.}
-% \end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width = 1.0\textwidth]{images/heat.png}
+  \caption{Evolution of heat equation for initial distribution given.}
+\end{figure}
 If we use this as the initial displacement for the wave equation with no initial velocity, we see that the waves interact in interesting ways to produce the following effects.
 \begin{equation}
     u(r,\phi,t)=\frac{9}{4}J_0(\alpha_{03}r)\cos(\alpha_{03} t)-3 J_1(\alpha_{12}r)\cos(\phi)\cos(\alpha_{12} t)+\frac{1}{5} J_2(\alpha_{24}r)\sin(2\phi)\cos(\alpha_{12} t)
 \end{equation}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width = 1.0\textwidth]{images/wave.png}
+  \caption{Evolution of wave equation for initial displacement given.}
+\end{figure}
 We can also use this as the initial distribution for the velocity of the wave. In this case, the displacements are very minor, and we can see that there are only slight deviations from the at rest behavior.
-
-
-% \begin{figure}[!htb]
-%   \minipage{0.32\textwidth}
-%     \includegraphics[width=\linewidth]{images/wave1.png}
-%   \endminipage\hfill
-%   \minipage{0.32\textwidth}
-%     \includegraphics[width=\linewidth]{images/wave2.png}
-%   \endminipage\hfill
-%   \minipage{0.32\textwidth}%
-%     \includegraphics[width=\linewidth]{images/wave3.png}
-%   \endminipage
-%   \caption{Solutions to the wave equation for a given initial displacement.}
-% \end{figure}
-
-
 \begin{equation}
     u(r,\phi,t)=\frac{9}{4 \alpha_{03}}J_0(\alpha_{03}r)\sin(\alpha_{03} t)-\frac{1}{\alpha_{12}} J_1(\alpha_{12}r)\cos(\phi)\sin(\alpha_{12} t)+\frac{1}{5\alpha_{24}} J_2(\alpha_{24}r)\sin(2\phi)\sin(\alpha_{12} t)
 \end{equation}
 
-% \begin{figure}[!htb]
-%     \minipage{0.32\textwidth}
-%       \includegraphics[width=\linewidth]{images/waves1.png}
-%     \endminipage\hfill
-%     \minipage{0.32\textwidth}
-%       \includegraphics[width=\linewidth]{images/waves2.png}
-%     \endminipage\hfill
-%     \minipage{0.32\textwidth}%
-%       \includegraphics[width=\linewidth]{images/waves3.png}
-%     \endminipage
-%     \caption{Solutions to the wave equation for a given initial velocity.}
-%     \end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width = 1.0\textwidth]{images/wavevel.png}
+  \caption{Evolution of wave equation for initial velocity given.}
+\end{figure}
+We can see that these solutions to the heat equation are oscillating about the steady state solution $u = 0$. We also see that for the solution where only the initial velocity is given, the amplitude is much lower than it is when the initial displacement is given. This is because we are dividing each term of the solution by its corresponding eigenvalue. This in turn means that the initial velocity does not impact the dynamics as much as the initial position does.
+\section{Conclusion}
+Through the method of eigenfunction expansions, solutions to the heat and wave equation are generated, which in turn allow us to analyze the dynamics of solutions. We see that the wave equation is the higher dimensional analogue to the simple harmonic oscillator, and the heat equation is the higher dimensional analogue to exponential decay. Instead of the solutions oscillating or decay towards and equilibrium point, they end up decaying to an equilibrium function, one that is harmonic.\\
+It is important to reiterate that this method of solving functions by eigenfunction expansion is not unique to Laplace operator, and can be used for any operator that satisfies equation (\ref{selfadjoint}), known as a self-adjoint operator. This allows us to in principal solve nearly any linear-homogenous PDE. In fact this method has a direct analogy to methods for solving a linear system of ODEs. Traditionally, we attempt to find the eigenvalues and straight-line solutions to the equation, which corresponds to finding the normal modes of a differential operator.
 \newpage
 \section{References}
 Asmar, N. H. (2002). \textit{Applied complex analysis with partial differential equations}. New Jersey: Prentice-Hall Inc.\\
@@ -430,7 +409,7 @@ This book was used to understand the physical meaning behind the wave and heat e
 \end{adjustwidth}
 Jackson, J. D. (1972). Classical electrodynamics (1st ed.). New York: Wiley.\\
 \begin{adjustwidth}{2 cm}{}
-This book was useful in introducing the method of eigenfunction expansions, Green's functions, and differenty types of boundary value problems.
+This book was useful in introducing the method of eigenfunction expansions, Green's functions, and different types of boundary value problems.\\
 \end{adjustwidth}
 Tolstov, G. P. (2009). \textit{Fourier series}. New York: Dover Publications, Inc.\\
 \begin{adjustwidth}{2 cm}{}

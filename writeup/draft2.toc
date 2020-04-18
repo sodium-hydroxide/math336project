@@ -7,4 +7,5 @@
 \contentsline {section}{\numberline {7}The Normal Modes on a Disc}{7}{section.7}% 
 \contentsline {section}{\numberline {8}Matching Initial Conditions}{8}{section.8}% 
 \contentsline {section}{\numberline {9}Dynamics for a Particular Initial Condition}{10}{section.9}% 
-\contentsline {section}{\numberline {10}References}{11}{section.10}% 
+\contentsline {section}{\numberline {10}Conclusion}{12}{section.10}% 
+\contentsline {section}{\numberline {11}References}{13}{section.11}% 

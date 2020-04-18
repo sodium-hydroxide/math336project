@@ -10,6 +10,8 @@ INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/base/size10.clo
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/base/size10.clo
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/changepage/changepage.sty
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/changepage/changepage.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/float/float.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/float/float.sty
 INPUT /Users/njb/Dropbox/Code/Git/math336project/math336project/writeup/noah.sty
 INPUT /Users/njb/Dropbox/Code/Git/math336project/math336project/writeup/noah.sty
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsmath.sty
@@ -175,6 +177,18 @@ INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmtt8.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmtt8.tfm
+INPUT /Users/njb/Dropbox/Code/Git/math336project/math336project/writeup/images/initialvalue.png
+INPUT /Users/njb/Dropbox/Code/Git/math336project/math336project/writeup/images/initialvalue.png
+INPUT /Users/njb/Dropbox/Code/Git/math336project/math336project/writeup/images/initialvalue.png
+INPUT /Users/njb/Dropbox/Code/Git/math336project/math336project/writeup/images/heat.png
+INPUT /Users/njb/Dropbox/Code/Git/math336project/math336project/writeup/images/heat.png
+INPUT /Users/njb/Dropbox/Code/Git/math336project/math336project/writeup/images/heat.png
+INPUT /Users/njb/Dropbox/Code/Git/math336project/math336project/writeup/images/wave.png
+INPUT /Users/njb/Dropbox/Code/Git/math336project/math336project/writeup/images/wave.png
+INPUT /Users/njb/Dropbox/Code/Git/math336project/math336project/writeup/images/wave.png
+INPUT /Users/njb/Dropbox/Code/Git/math336project/math336project/writeup/images/wavevel.png
+INPUT /Users/njb/Dropbox/Code/Git/math336project/math336project/writeup/images/wavevel.png
+INPUT /Users/njb/Dropbox/Code/Git/math336project/math336project/writeup/images/wavevel.png
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT /Users/njb/Dropbox/Code/Git/math336project/math336project/writeup/draft2.aux
 INPUT /Users/njb/Dropbox/Code/Git/math336project/math336project/writeup/draft2.out
