@@ -10,4 +10,4 @@
 \contentsline {section}{\numberline {10}Conclusion}{12}{section.10}% 
 \contentsline {section}{\numberline {A}Solutions to Laplace's Equation}{13}{Appendix.1.A}% 
 \contentsline {section}{\numberline {B}Inhomogenous Boundary Conditions}{14}{Appendix.1.B}% 
-\contentsline {section}{\numberline {11}References}{15}{section.11}% 
+\contentsline {section}{References}{15}{section*.6}% 
