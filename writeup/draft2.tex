@@ -2,7 +2,7 @@
 \usepackage{changepage}
 \usepackage{float}
 \usepackage{noah}
-
+\usepackage{{appendix}}
 
 \usepackage[font=small,labelfont=bf]{caption} 
 %% Stuff for inserting code into document
@@ -56,9 +56,9 @@ The wave equation, as the name suggests, describes how waves propagate through a
 \end{equation}
 where $\lambda$ is the linear mass density, and $a$ is the vertical acceleration of the string. If we raise part of the string near this point so that the angle the string makes between these two points is $\theta$, then the force is:
 \begin{equation}
-    F_{net}=T \sin(\theta + d\theta)-T \sin(\theta)=T\cos(\theta)d\theta)
+    F_{net}=T \sin(\theta + d\theta)-T \sin(\theta)=T\cos(\theta)d\theta
 \end{equation}
-where $T$ is the tension in the rope. If we assume small enough displacements, we can approximated $\cos\theta\approx 1$ and write $d\theta= (\partial\theta/\partial x) dx$. Since we are assuming small displacements, we can say that the angle $\theta$ is the slope of the string. We will write the displacement of the string as $u=u(x,t)$, and say that this function must satisfy the following equation:
+where $T$ is the tension in the rope. If we assume small enough displacements, we can approximate $\cos\theta\approx 1$ and write $d\theta= (\partial\theta/\partial x) dx$. Since we are assuming small displacements, we can say that the angle $\theta$ is the slope of the string. We will write the displacement of the string as $u=u(x,t)$, and say that this function must satisfy the following equation:
 \begin{equation}\pder{^2 u}{t^2}= \frac{T}{\lambda}\pder{^2 u}{x^2}=c^2 \pder{^2 u}{x^2}\end{equation}
 We are introducing the constant $c$ which is the speed of propagation on the string. This can be absorbed into our time variable, by redefining our unit of time. For higher spacial dimensions, the second partial derivative with respect to $x$ is replaced with the Laplacian, so the general wave equation is:
 \begin{equation}
@@ -81,7 +81,7 @@ where $\sigma$ is the thermal conductivity. The reason for using the energy grad
     \lapl u = \pder{u}{t}
   }
 \end{equation}
-Here we have absorbed the thermal conductivity into our definition of time. The interesting part of this equation is that it can be used to describe diffusive processes as well. In fact it can be used to describe many systems that do no violate the first and second law of thermodynamics. The first of these states energy conservation, and the second states that the entropy of a system must increase. This second law is one of the few that does depend on the direction of time. This is why the heat equation is not symmetric in the spatial and temporal variables, when the wave equation is.\\
+Here we have absorbed the thermal conductivity into our definition of time. The interesting part of this equation is that it can be used to describe diffusive processes as well. In fact it can be used to describe many systems that do not violate the first and second law of thermodynamics. The first of these states energy conservation, and the second states that the entropy of a system must increase. This second law is one of the few that does depend on the direction of time. This is why the heat equation is not symmetric in the spatial and temporal variables, whereas the wave equation is.\\
 This system has harmonic solutions whenever the system is not changing in time. Therefore, we see that in time, the solution tends towards a harmonic solution. It is for this reason that solutions to Laplace's equations describe steady state temperature distributions.\\
 In order to analyze the different types of solutions these equations provide, as well as some general methods for solving PDEs, we will solve both of these equations on the unit disc $B^2$ with the boundary condition that the function must vanish at the boundary. Similar to the case for ODEs, we must also provide initial conditions. Since the heat equation is first order in time, we only need to know the initial heat distribution $u(r,\phi,0)=u_o(r,\phi)$. The wave equation is second order in time, so we must supply both the initial displacement of the circular membrane, $u(r,\phi,0)=u_o(r,\phi)$, and the initial velocity of $\der{t} u(r,\phi,0)=\dot{u}_o(r,\phi)$. Together with the boundary data, these conditions uniquely define a solution to the differential equation.
 \section{Separation of Variables}
@@ -111,7 +111,7 @@ Again the time component can be easily solved, to give the following solution:
 \begin{equation}
   \chi_{\mathrm{wave}}=A\cos(kt)+B\sin(kt)
 \end{equation}
-It is important to notice that for both of these equations, the spacial part is the same. Given that we are using the same boundary conditions for both equations, solving this equation will provide us with solutions to both the wave and heat equation.
+It is important to notice that for both of these equations, the spatial part is the same. Given that we are using the same boundary conditions for both equations, solving this equation will provide us with solutions to both the wave and heat equation.
 \section{The Helmholtz Equation}
 The above differential equation:
 \begin{equation}
@@ -262,7 +262,7 @@ We refer to these basis functions as the normal modes for this solution, for a s
 The inner product for this space is defined as a combination for the inner products for the radial and angular components,
 \begin{equation}
   \boxed{
-    \left(f(r,\phi),g(r,\phi)\right) = \int_0 ^1 dr \int_0 ^{2\pi} dr f^\star(r,\phi) g(r,\phi) r
+    \left(f(r,\phi),g(r,\phi)\right) = \int_0 ^1 dr \int_0 ^{2\pi} d\phi f^\star(r,\phi) g(r,\phi) r
   }
 \end{equation}
 Our normal modes will therefore satisfy the following orthogonality relationship:
@@ -294,7 +294,7 @@ If we go back to our separated equation for the heat equation, we have the follo
 \begin{equation}
   u(r,\phi,t) = \sum_{nm} c_{nm} \psi_{nm}(r,\phi) \exp(-\alpha_{nm}^2 t)
 \end{equation}
-Before we continue, it is important to note that the normal modes that oscillate more spatially, (those with a larger eigenvalue) will damp more quickly than others. This shows the smoothing property of solutions to the heat equation. Given that our boundary data states that the function must vanish at the boundary, we see that the steady state solution is one with uniform temperature. If the boundary was non-uniform, then we would find that the solution would evolve to a soution of Laplace's equation whose boundary values matched the boundary temperature.\\
+Before we continue, it is important to note that the normal modes that oscillate more spatially, (those with a larger eigenvalue) will dampen more quickly than others. This shows the smoothing property of solutions to the heat equation. Given that our boundary data states that the function must vanish at the boundary, we see that the steady state solution is one with uniform temperature. If the boundary was non-uniform, then we would find that the solution would evolve to a soution of Laplace's equation whose boundary values matched the boundary temperature.\\
 The above solution is the general solution to the heat equation for any constants $c_{nm}$, but in order to find the particular solution, we evaluate the function at time $t=0$.
 \begin{equation}
   u(r,\phi,0) = \sum_{nm} c_{nm} \psi_{nm}(r,\phi) 
@@ -316,7 +316,7 @@ Any solution to the heat equation can be written in the following way:
 \begin{equation}
   u(r,\phi,t) = \int_0^{2\pi} d\phi' \int_0^1 dr' \left[r' G(r,r',\phi,\phi',t) u(r',\phi',0) \right]
 \end{equation}
-In a similar vain, we may write the solution to the wave equation in the following way:
+In a similar vein, we may write the solution to the wave equation in the following way:
 \begin{equation}
 u(r,\phi,t) = \sum_{nm} = \psi_{nm}(A_{nm}\cos(\alpha_{nm} t)+B_{nm}\sin(\alpha_{nm}t))
 \end{equation}
@@ -391,8 +391,87 @@ We can also use this as the initial distribution for the velocity of the wave. I
 \end{figure}
 We can see that these solutions to the heat equation are oscillating about the steady state solution $u = 0$. We also see that for the solution where only the initial velocity is given, the amplitude is much lower than it is when the initial displacement is given. This is because we are dividing each term of the solution by its corresponding eigenvalue. This in turn means that the initial velocity does not impact the dynamics as much as the initial position does.
 \section{Conclusion}
-Through the method of eigenfunction expansions, solutions to the heat and wave equation are generated, which in turn allow us to analyze the dynamics of solutions. We see that the wave equation is the higher dimensional analogue to the simple harmonic oscillator, and the heat equation is the higher dimensional analogue to exponential decay. Instead of the solutions oscillating or decay towards and equilibrium point, they end up decaying to an equilibrium function, one that is harmonic.\\
-It is important to reiterate that this method of solving functions by eigenfunction expansion is not unique to Laplace operator, and can be used for any operator that satisfies equation (\ref{selfadjoint}), known as a self-adjoint operator. This allows us to in principal solve nearly any linear-homogenous PDE. In fact this method has a direct analogy to methods for solving a linear system of ODEs. Traditionally, we attempt to find the eigenvalues and straight-line solutions to the equation, which corresponds to finding the normal modes of a differential operator.
+Through the method of eigenfunction expansions, solutions to the heat and wave equation are generated, which in turn allow us to analyze the dynamics of solutions. We see that the wave equation is the higher dimensional analogue to the simple harmonic oscillator, and the heat equation is the higher dimensional analogue to exponential decay. Instead of the solutions oscillating or decaying towards an equilibrium point, they end up decaying to an equilibrium function, one that is harmonic.\\
+It is important to reiterate that this method of solving functions by eigenfunction expansion is not unique to the Laplace operator, and can be used for any operator that satisfies equation (\ref{selfadjoint}), known as a self-adjoint operator. This allows us to in principal solve nearly any linear-homogenous PDE. In fact this method has a direct analogy to methods for solving a linear system of ODEs. Traditionally, we attempt to find the eigenvalues and straight-line solutions to the equation, which corresponds to finding the normal modes of a differential operator.
+\newpage
+\begin{appendices}
+\section{Solutions to Laplace's Equation}
+Given their importance in both the heat and wave equations, it is important to introduce some properties of solutions to Laplace's equation. The most important property of Laplace's equation is the averaging property. Suppose we have a function $u:\Omega\rightarrow\bb{R}$, then for all $x\in\Omega$, $u(x)$ is the average of the outputs of $u$ for all points an equal distance from $x$. This is a feature we will prove for the unit disc.\\
+In order to solve Laplace's equation, we begin with separation of variables:
+\begin{equation}
+  \frac{1}{f(r)}\left[ r^2 \dder{^2 f}{r^2} + r\dder{f}{r} \right] =-\frac{1}{g(\phi)}\dder{^2 g}{\phi^2} = n^2
+\end{equation}
+Here the angular equation is the same as it was for the Helmholtz equation, however this time we express the solution in terms of sine and cosine functions
+\begin{equation}
+  g(\phi)=A_n \cos n\phi+B_n \sin n\phi
+\end{equation}
+The radial equation is slightly different now since we no longer have the eigenvalue term:
+\begin{equation}
+  r^2 f''+ r f'- n^2 f=0
+\end{equation}
+This is an Euler-Cauchy problem, and has solutions $r^{\pm n}$. Since we require the function to be at the very least continuous inside the unit disc, we only keep the $r^n$ term. This means that the general solution to Laplace's equation is:
+\begin{equation}
+  u(r,\phi)=\sum_{n=0}^\infty A_n r^n \cos n\phi + B_n r^n \sin n\phi
+\end{equation}
+For the boundary conditions we have worked with through this report, we specified the value of the function on the boundary, so our boundary contition is $u(1,\phi)= h(\phi)$. If we insert this into our solution we get:
+\begin{equation}
+  h(\phi) = \sum_{n=0}^\infty A_n \cos n\phi+B_n \sin n\phi
+\end{equation}
+This is the Fourier series in terms of sine and cosine functions. These form another basis for functions on the unit circle. If we rewrite the sine and cosine functions in terms of complex exponentials, we find the following relations between the expansion coefficients:
+\begin{equation}
+  \begin{matrix}
+    A_o = 2 c_o\\
+    A_n = c_n + c_{-n}\\
+    B_n = i(c_n - c_{-n})
+  \end{matrix}
+\end{equation}
+This allows us to write the expansion coefficients as:
+\begin{equation}
+  \begin{matrix}
+    A_o = \frac{1}{2\pi}\int_0^{2\pi} u(1,\phi)d\phi\\
+    A_n = \frac{1}{\pi}\int_0^{2\pi} u(1,\phi)\cos n\phi d\phi\\
+    B_n = \frac{1}{\pi}\int_0^{2\pi} u(1,\phi)\sin n\phi d\phi\\
+  \end{matrix}
+\end{equation}
+The solution $u(r,\phi)$ can be written in terms of a Green's function in the following way:
+\begin{equation}P(r,\phi,\phi') = \frac{1}{2\pi}\left(1+ 2\sum_{n=1}^\infty r^n (\cos n\phi\cos n\phi'+\sin n\phi\sin n\phi') \right)
+\end{equation}
+Through this function, we may write the solution as:
+\begin{equation}
+  u(r,\phi) = \int_0^{2\pi} u(1,\phi')P(r,\phi,\phi')d\phi'
+\end{equation}
+Unlike the Green's functions for the wave or heat equations, this can be simplified greatly. We first make use of the identity $\cos(a-b)=\cos a\cos b+\sin a\sin b$, and then rewrite our cosine function in terms of complex exponentials,
+\begin{equation}
+  P(r,\phi,\phi') = \frac{1}{2\pi}\left(
+    1+\sum_{n = 1}^{\infty } (re^{i(\phi-\phi')})^n + (re^{-i(\phi-\phi')})^n 
+  \right)
+\end{equation}
+The geometric series tells us that:
+\begin{equation}
+  \sum_{n=0}^\infty x^n = 1+\sum_{n=1}^\infty x^n = \frac{1}{1-x}
+\end{equation}
+for $|x|<1$. Since $r\in [0,1]$ and the complex exponentials never exceed 1, we have convergence:
+\begin{equation}
+  P(r,\phi,\phi') = \frac{1}{2\pi}\left(1+\frac{1}{1-r \exp(i(\phi-\phi'))}-1 + \frac{1}{1-\exp(-i(\phi-\phi'))} - 1\right)
+\end{equation}
+This can be simplified to give:
+\begin{equation}
+  \boxed{
+    P(r,\phi,\phi') = \frac{1}{2\pi} \frac{1-r^2}{1 - 2r \cos(\phi-\phi') - r^2}
+  }
+\end{equation}
+This is known as the Poisson kernel, and allows us to write a general solution to Laplace's equation. If we consider the value of the function at $r=0$, we see that the value is:
+\begin{equation}
+  u(0,\phi) = \frac{1}{2\pi}\int_0^{2\pi} u(1,\phi)d\phi
+\end{equation}
+which confirms the averaging property of solutions to Laplace's equation.
+\section{Inhomogenous Boundary Conditions}
+Throughout this report, we used the boundary condition that the function must vanish at the boundary. However in certain situations, the boundary may be a non-zero function for all time. In the contex of the the heat equation, this means that the boundary is kept at a fixed temperature, and the solution will tend towards the solution to Laplace's equation with that boundary value. Suppose that for both the wave and heat equation, we have the restriction $u(1,\phi,t)=h(\phi)$. We will define a new function:
+\begin{equation}
+  v(r,\phi,t) = u(r,\phi,t) - \int_0^{2\pi} P(r,\phi,\phi')h(\phi')d\phi'
+\end{equation}
+where $P$ is the Poisson kernel. We see that $v$ is now zero at the boundary, and still will satisfy the wave or heat equation. We may now solve the initial value problem for $v(r,\phi,t)$ and then solve for $u(r,\phi,t)$. 
+\end{appendices}
 \newpage
 \section{References}
 Asmar, N. H. (2002). \textit{Applied complex analysis with partial differential equations}. New Jersey: Prentice-Hall Inc.\\

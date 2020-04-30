@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  18 APR 2020 08:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  30 APR 2020 08:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -252,7 +252,12 @@ Package: geometry 2018/04/16 v5.8 Page Geometry
 \Gm@layouthoffset=\dimen124
 \Gm@layoutvoffset=\dimen125
 \Gm@dimlist=\toks30
-)) (/usr/local/texlive/2019/texmf-dist/tex/latex/caption/caption.sty
+)) (/usr/local/texlive/2019/texmf-dist/tex/latex/appendix/appendix.sty
+Package: appendix 2009/09/02 v1.2b extra appendix facilities
+\c@@pps=\count116
+\c@@ppsavesec=\count117
+\c@@ppsaveapp=\count118
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
  (/usr/local/texlive/2019/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
@@ -265,27 +270,27 @@ Package caption3 Info: TeX engine: e-TeX on input line 64.
 \caption@parindent=\dimen131
 \caption@hangindent=\dimen132
 )
-\c@caption@flags=\count116
-\c@ContinuedFloat=\count117
+\c@caption@flags=\count119
+\c@ContinuedFloat=\count120
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count118
+\lst@mode=\count121
 \lst@gtempboxa=\box31
 \lst@token=\toks31
-\lst@length=\count119
+\lst@length=\count122
 \lst@currlwidth=\dimen133
-\lst@column=\count120
-\lst@pos=\count121
+\lst@column=\count123
+\lst@pos=\count124
 \lst@lostspace=\dimen134
 \lst@width=\dimen135
-\lst@newlines=\count122
-\lst@lineno=\count123
+\lst@newlines=\count125
+\lst@lineno=\count126
 \lst@maxwidth=\dimen136
  (/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2019/02/27 1.8b (Carsten Heinz)
-\c@lstnumber=\count124
-\lst@skipnumbers=\count125
+\c@lstnumber=\count127
+\lst@skipnumbers=\count128
 \lst@framebox=\box32
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2019/02/27 1.8b listings configuration
@@ -318,16 +323,16 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 35.
 LaTeX Font Info:    ... okay on input line 35.
  (/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count126
+\scratchcounter=\count129
 \scratchdimen=\dimen137
 \scratchbox=\box33
-\nofMPsegments=\count127
-\nofMParguments=\count128
+\nofMPsegments=\count130
+\nofMParguments=\count131
 \everyMPshowfont=\toks32
-\MPscratchCnt=\count129
+\MPscratchCnt=\count132
 \MPscratchDim=\dimen138
-\MPnumerator=\count130
-\makeMPintoPDFobject=\count131
+\MPnumerator=\count133
+\makeMPintoPDFobject=\count134
 \everyMPtoPDFconversion=\toks33
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -348,7 +353,7 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
  (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count132
+\c@section@level=\count135
 )
 LaTeX Info: Redefining \ref on input line 35.
 LaTeX Info: Redefining \pageref on input line 35.
@@ -395,7 +400,7 @@ LaTeX Info: Redefining \nameref on input line 35.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count133
+\c@lstlisting=\count136
 LaTeX Font Info:    Try loading font information for U+msa on input line 37.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -410,7 +415,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
  [1
 
 {/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] [5] [6] [7] [8] [9]
-<images/initialvalue.png, id=173, 361.35pt x 295.1025pt>
+<images/initialvalue.png, id=183, 361.35pt x 295.1025pt>
 File: images/initialvalue.png Graphic file (type png)
 <use images/initialvalue.png>
 Package pdftex.def Info: images/initialvalue.png  used on input line 360.
@@ -420,13 +425,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 356--362
 
  []
 
-<images/heat.png, id=174, 1249.66875pt x 345.29pt>
+<images/heat.png, id=184, 1249.66875pt x 345.29pt>
 File: images/heat.png Graphic file (type png)
 <use images/heat.png>
 Package pdftex.def Info: images/heat.png  used on input line 370.
 (pdftex.def)             Requested size: 397.485pt x 109.82593pt.
 [10 </Users/njb/Dropbox/Code/Git/math336project/math336project/writeup/images/initialvalue.png (PNG copy)>]
-<images/wave.png, id=186, 1249.66875pt x 345.29pt>
+<images/wave.png, id=196, 1249.66875pt x 345.29pt>
 File: images/wave.png Graphic file (type png)
 <use images/wave.png>
 Package pdftex.def Info: images/wave.png  used on input line 379.
@@ -436,84 +441,84 @@ Overfull \hbox (23.8894pt too wide) detected at line 385
 []\OML/cmm/m/it/10 u\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 r; ^^^; t\OT1/cmr/m/n/10 ) = []\OML/cmm/m/it/10 J[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 []r\OT1/cmr/m/n/10 ) [](\OML/cmm/m/it/10 []t\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ []\OML/cmm/m/it/10 J[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 []r\OT1/cmr/m/n/10 ) [](\OML/cmm/m/it/10 ^^^\OT1/cmr/m/n/10 ) [](\OML/cmm/m/it/10 []t\OT1/cmr/m/n/10 ) + []\OML/cmm/m/it/10 J[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 []r\OT1/cmr/m/n/10 ) [](2\OML/cmm/m/it/10 ^^^\OT1/cmr/m/n/10 ) [](\OML/cmm/m/it/10 []t\OT1/cmr/m/n/10 )
  []
 
-<images/wavevel.png, id=187, 1249.66875pt x 345.29pt>
+<images/wavevel.png, id=197, 1249.66875pt x 345.29pt>
 File: images/wavevel.png Graphic file (type png)
 <use images/wavevel.png>
 Package pdftex.def Info: images/wavevel.png  used on input line 389.
 (pdftex.def)             Requested size: 397.485pt x 109.82593pt.
-[11 </Users/njb/Dropbox/Code/Git/math336project/math336project/writeup/images/heat.png> </Users/njb/Dropbox/Code/Git/math336project/math336project/writeup/images/wave.png> </Users/njb/Dropbox/Code/Git/math336project/math336project/writeup/images/wavevel.png>] [12]
-Underfull \hbox (badness 10000) in paragraph at lines 398--399
+[11 </Users/njb/Dropbox/Code/Git/math336project/math336project/writeup/images/heat.png> </Users/njb/Dropbox/Code/Git/math336project/math336project/writeup/images/wave.png> </Users/njb/Dropbox/Code/Git/math336project/math336project/writeup/images/wavevel.png>] [12] [13] [14]
+Underfull \hbox (badness 10000) in paragraph at lines 477--478
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 400--401
+Underfull \hbox (badness 10000) in paragraph at lines 479--480
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 402--403
+Underfull \hbox (badness 10000) in paragraph at lines 481--482
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 404--405
+Underfull \hbox (badness 10000) in paragraph at lines 483--484
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 406--407
+Underfull \hbox (badness 10000) in paragraph at lines 485--486
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 408--409
+Underfull \hbox (badness 10000) in paragraph at lines 487--488
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 410--411
+Underfull \hbox (badness 10000) in paragraph at lines 489--490
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 412--413
+Underfull \hbox (badness 10000) in paragraph at lines 491--492
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 414--415
+Underfull \hbox (badness 10000) in paragraph at lines 493--494
 
  []
 
 
-Overfull \hbox (0.8655pt too wide) in paragraph at lines 416--417
+Overfull \hbox (0.8655pt too wide) in paragraph at lines 495--496
 []\OT1/cmr/m/n/10 This book was used to un-der-stand ba-sic prop-er-ties of Fourier Se-ries and Fourier-
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 418.
-[13]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 418.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 497.
+[15]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 497.
  (/Users/njb/Dropbox/Code/Git/math336project/math336project/writeup/draft2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 418.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 418.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 497.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 497.
 Package rerunfilecheck Info: File `draft2.out' has not changed.
-(rerunfilecheck)             Checksum: 4FD5D67FE97CE09D808415F80307D4AF;632.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 418.
+(rerunfilecheck)             Checksum: 9AD209AD2E191D03185E2728212F8C6B;773.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 497.
  ) 
 Here is how much of TeX's memory you used:
- 9283 strings out of 492616
- 138069 string characters out of 6129482
- 429784 words of memory out of 5000000
- 12973 multiletter control sequences out of 15000+600000
+ 9398 strings out of 492616
+ 139740 string characters out of 6129482
+ 431200 words of memory out of 5000000
+ 13066 multiletter control sequences out of 15000+600000
  17871 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,8n,40p,859b,339s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,8n,40p,859b,383s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on /Users/njb/Dropbox/Code/Git/math336project/math336project/writeup/draft2.pdf (13 pages, 582635 bytes).
+Output written on /Users/njb/Dropbox/Code/Git/math336project/math336project/writeup/draft2.pdf (15 pages, 592302 bytes).
 PDF statistics:
- 294 PDF objects out of 1000 (max. 8388607)
- 250 compressed objects within 3 object streams
- 93 named destinations out of 1000 (max. 500000)
- 109 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 331 PDF objects out of 1000 (max. 8388607)
+ 285 compressed objects within 3 object streams
+ 112 named destinations out of 1000 (max. 500000)
+ 125 words of extra memory for PDF output out of 10000 (max. 10000000)
 
