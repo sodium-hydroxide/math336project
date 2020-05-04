@@ -60,7 +60,7 @@ where $\lambda$ is the linear mass density, and $a$ is the vertical acceleration
 \end{equation}
 where $T$ is the tension in the rope. If we assume small enough displacements, we can approximate $\cos\theta\approx 1$ and write $d\theta= (\partial\theta/\partial x) dx$. Since we are assuming small displacements, we can say that the angle $\theta$ is the slope of the string. We will write the displacement of the string as $u=u(x,t)$, and say that this function must satisfy the following equation:
 \begin{equation}\pder{^2 u}{t^2}= \frac{T}{\lambda}\pder{^2 u}{x^2}=c^2 \pder{^2 u}{x^2}\end{equation}
-We are introducing the constant $c$ which is the speed of propagation on the string. This can be absorbed into our time variable, by redefining our unit of time. For higher spacial dimensions, the second partial derivative with respect to $x$ is replaced with the Laplacian, so the general wave equation is:
+We are introducing the constant $c$ which is the speed of propagation on the string. This can be absorbed into our time variable, by redefining our unit of time. For higher spatial dimensions, the second partial derivative with respect to $x$ is replaced with the Laplacian, so the general wave equation is:
 \begin{equation}
   \boxed{
     \lapl u =\pder{^2 u}{t^2}
@@ -89,7 +89,7 @@ To begin solving these equations, we will employ a method known as separation of
 \begin{equation}
   \frac{\lapl \psi}{\psi} = \frac{1}{\chi(t)}\dder{\chi}{t}
 \end{equation}
-The left-hand side is just a function of the spacial variables, while the right-hand side is just a function of time. This means that the two sides are independent of each other, and therefore must be equal to a constant. For reasons that will be clear later on, I will use $-k^2$ as the constant. This leaves us with two differential equations:
+The left-hand side is just a function of the spatial variables, while the right-hand side is just a function of time. This means that the two sides are independent of each other, and therefore must be equal to a constant. For reasons that will be clear later on, I will use $-k^2$ as the constant. This leaves us with two differential equations:
 \begin{equation}
   \begin{matrix}
     \lapl\psi+k^2\psi=0\\
@@ -219,7 +219,7 @@ This is known as Bessel's differential equation, and has the following two solut
 \begin{equation}
   f(r) = c_1 J_n(k r) + c_2 Y_n (k r)
 \end{equation}
-where $J_n$ is the $n$-th Bessel function of the first kind, or simply the $n$-th Bessel function, and where $Y_n$ is the $n$-th Bessel function of the second kind, or simply the $n$-th Neumann function. Neumann functions have poles at the origin, so in order for solutions to be physical, we require $c_2 = 0$. For simplicity, we will let $c_1 = 2$. Our boundary condition that $f(1)= 0$ determines our boundary conditions. The eigenvalues of the Laplacian must satisfy the following:
+where $J_n$ is the $n$-th Bessel function of the first kind, or simply the $n$-th Bessel function, and where $Y_n$ is the $n$-th Bessel function of the second kind, or simply the $n$-th Neumann function. Neumann functions have poles at the origin, so in order for solutions to be physical, we require $c_2 = 0$. For simplicity, we will let $c_1 = 1$. Our boundary condition that $f(1)= 0$ determines our boundary conditions. The eigenvalues of the Laplacian must satisfy the following:
 \begin{equation}
   \boxed{
     J_n(k) = 0
@@ -258,7 +258,7 @@ If we combine the radial and angular part of the solution to the Helmholtz equat
     \psi_{nm}(r,\phi) = J_n ( \alpha_{nm} r) e^{i n \phi}
   }
 \end{equation}
-We refer to these basis functions as the normal modes for this solution, for a solution to the wave equation whose spacial part is one of the functions will vibrate at a single frequency.\\
+We refer to these basis functions as the normal modes for this solution, for a solution to the wave equation whose spatial part is one of the functions will vibrate at a single frequency.\\
 The inner product for this space is defined as a combination for the inner products for the radial and angular components,
 \begin{equation}
   \boxed{
